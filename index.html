@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - High Contrast Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-img" aria-label="Profile placeholder"></div>
+                <h2>Your Name</h2>
+                <h3>Front-End Developer</h3>
+                <div class="contact-info">
+                    <p><strong>Phone</strong> (123) 456-7890</p>
+                    <p><strong>Email</strong> contact@example.com</p>
+                    <p><strong>Location</strong> City, Country</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Twitter">tw</a>
+                        <a href="#" aria-label="GitHub">gh</a>
+                    </div>
+                </div>
+                <button class="btn" onclick="location.href='#contact'">CONTACT ME</button>
+            </div>
+            <div class="about-me" id="about">
+                <h2>About Me</h2>
+                <p>I'm a passionate front-end developer specializing in creating accessible, high-contrast web experiences. With a focus on clean code and user-centered design, I build interfaces that work for everyone regardless of ability or device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon" aria-label="HTML5 icon">HTML</div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup with accessibility best practices</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" aria-label="CSS3 icon">CSS</div>
+                    <h3>CSS3</h3>
+                    <p>High-contrast designs and responsive layouts</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" aria-label="JavaScript icon">JS</div>
+                    <h3>JavaScript</h3>
+                    <p>Interactive features with inclusive UX patterns</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon" aria-label="Accessibility icon">A11Y</div>
+                    <h3>Accessibility</h3>
+                    <p>WCAG 2.1 compliant interfaces</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <p>High-contrast portfolio pieces demonstrating accessibility-focused development</p>
+            <div class="projects-grid">
+                <!-- Project placeholders - replace with your actual projects -->
+                <div class="project-item" aria-label="Project 1 preview"></div>
+                <div class="project-item" aria-label="Project 2 preview"></div>
+                <div class="project-item" aria-label="Project 3 preview"></div>
+                <div class="project-item" aria-label="Project 4 preview"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <a href="#" class="scroll-top" aria-label="Scroll to top">↑</a>
+            <h2>Portfolio</h2>
+            <div class="footer-links">
+                <a href="#about">ABOUT</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+            <p>Created with ❤️ and high contrast</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Scroll top button
+        const scrollTop = document.querySelector('.scroll-top');
+        window.addEventListener('scroll', () => {
+            scrollTop.style.display = (window.pageYOffset > 300) ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
